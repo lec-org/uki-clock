@@ -1,0 +1,59 @@
+.user-info-container {
+  // width: 50px;
+  overflow: hidden;
+  word-wrap: break-word;
+  border-radius: 10px;
+  background-color: white;
+  transition: 0.3s;
+  padding: 5px;
+  .infos {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    &__upper {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-self: start;
+      .upper_left {
+        .user-avatar {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+        }
+      }
+      .upper_right {
+        margin: 10px;
+        .user-nickname {
+          font-style: 18px;
+        }
+        .user-id {
+          display: flex;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .infos__bottom {
+  }
+  .infos-buttons {
+    margin-top: 3px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    button {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+.edit-dialog {
+  width: 330px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}

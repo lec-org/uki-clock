@@ -1,0 +1,49 @@
+$bg: lightblue;
+.home-page__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  .container__left {
+    min-width: 300px;
+    padding: 5px;
+    height: 100%;
+    width: 70%;
+    background: #fff;
+    position: relative;
+    border-radius: 5px;
+    .left__upper {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .clock-btn__container {
+      width: 100px;
+      height: 200px;
+      border-radius: 5px;
+      // background: #f00;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .clock-status {
+      width: calc(100% - 110px);
+      height: 200px;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    }
+  }
+  .container__right {
+    height: 100%;
+    width: 30%;
+    background: #fff;
+    position: relative;
+    border-radius: 5px;
+  }
+}

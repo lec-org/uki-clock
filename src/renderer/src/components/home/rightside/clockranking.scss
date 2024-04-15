@@ -1,0 +1,19 @@
+.rank-list__container {
+  width: 100%;
+  .rank-list_tabs__container {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rt-SegmentedControlItem {
+      cursor: pointer;
+    }
+  }
+  .rank-list {
+    // * 禁止选择
+    user-select: none;
+    height: calc(100% - 50px);
+  }
+}

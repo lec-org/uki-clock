@@ -1,0 +1,25 @@
+.main-content {
+  .content-header {
+    padding-left: 10px;
+    width: 100%;
+    height: 30px;
+    background: lightblue;
+    .progress {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content-body {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    padding: 10px;
+    .outlet-container {
+      width: 100%;
+      height: calc(100% - 30px);
+
+      // background: #fff;
+      border-radius: 5px;
+    }
+  }
+}
