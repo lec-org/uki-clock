@@ -135,19 +135,25 @@ const clockLineChartOption = {
       smooth: true, //是否平滑曲线显示
       showAllSymbol: true,
       symbol: 'circle',
-      symbolSize: 14,
+      symbolSize: 8,
       lineStyle: {
         normal: {
-          color: gradientColorFac([0, 0, 1, 0])
+          color: gradientColorFac(
+            [0, 0, 1, 0],
+            [
+              { offset: 0, color: '#ffa117' },
+              { offset: 1, color: '#fff' }
+            ]
+          )
         }
       },
       itemStyle: {
         normal: {
           color: '#ffffff', //拐点颜色
           borderColor: gradientColorFac([0, 0, 1, 1]), //拐点边框颜色
-          borderWidth: 4,
+          borderWidth: 2,
           lineStyle: {
-            width: 5.5
+            width: 3
           }
         }
       },
@@ -157,32 +163,10 @@ const clockLineChartOption = {
       areaStyle: {
         normal: {
           color: gradientColorFac(
-            [0, 0, 0, 1],
+            [0, 0, 1, 0],
             [
-              {
-                offset: 0,
-                color: '#f44336'
-              },
-              {
-                offset: 0.2,
-                color: '#ff8c00'
-              },
-              {
-                offset: 0.4,
-                color: '#ffa117'
-              },
-              {
-                offset: 0.6,
-                color: '#0fc70f'
-              },
-              {
-                offset: 0.8,
-                color: '#2196f3'
-              },
-              {
-                offset: 1,
-                color: '#b145e9'
-              }
+              { offset: 0, color: '#ffa117' },
+              { offset: 1, color: '#fff' }
             ]
           )
         }
@@ -219,7 +203,7 @@ const ClockChart = () => {
     updateChart()
     return () => {
       // * 组件销毁时销毁折线图实例
-      if (lineChart.current) lineChart.current?.dispose()
+      // if (lineChart.current) lineChart.current?.dispose()
     }
   }, [])
   useUpdateEffect(() => {

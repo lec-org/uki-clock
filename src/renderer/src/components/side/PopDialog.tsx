@@ -1,36 +1,42 @@
-import { Button, Dialog, TextField } from '@radix-ui/themes'
+import { Button, Dialog } from '@radix-ui/themes'
+import { message } from 'antd'
 import './popdialog.scss'
 const PopDialog = () => {
+  const [messageApi, contextHolder] = message.useMessage()
   return (
     <div className="pop-dialog">
-      <div className="pop-dialog-closed-controller">
+      {contextHolder}
+      <div className="closed">
         <Dialog.Close>
           <div className="closed-icon"></div>
         </Dialog.Close>
       </div>
-      <div className="edit-content">
-        <div className="pop-dialog__header">
-          <div className="edit-img">
-            <input type="file" multiple accept=".jpg,.jpeg,.png,.gif" />
-            <img src="https://picsum.photos/80" alt="" />
-          </div>
+      <div className="content">
+        <div className="pop-avatar">
+          <img src="https://picsum.photos/80" alt="" />
+          <input type="file" name="" id="" />
         </div>
-        <div className="pop-dialog__content">
-          <div className="nick-name-ipt ">
-            <span>昵称:</span>
-            <TextField.Root size="1" placeholder="请输入昵称" />
-          </div>
-          <div className="bio-ipt">
-            <span>简介:</span>
-            <TextField.Root size="1" placeholder="请输入简介" />
-          </div>
+        <div className="ipt">
+          <span>昵称 :</span>
+          <input type="text" />
+        </div>
+        <div className="ipt">
+          <span>个签 :</span>
+          <input type="text" />
         </div>
       </div>
 
-      <div className="pop-dialog__footer">
-        <Button>保存</Button>
+      <div className="footer">
         <Dialog.Close>
-          <Button>取消</Button>
+          <Button className="confirm" variant="soft">
+            保存
+          </Button>
+        </Dialog.Close>
+
+        <Dialog.Close>
+          <Button className="cancel" variant="outline">
+            取消
+          </Button>
         </Dialog.Close>
       </div>
     </div>

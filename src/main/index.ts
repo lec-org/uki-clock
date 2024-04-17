@@ -2,6 +2,8 @@ import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { BrowserWindow, app, shell } from 'electron'
 import { join } from 'path'
 import icon from '../../resources/icon.png?asset'
+import './resetWin'
+import './setLoginWin'
 import createTray from './tray'
 function createWindow(): void {
   // Create the browser window.
@@ -10,6 +12,7 @@ function createWindow(): void {
     height: 670,
     show: false,
     frame: false,
+    resizable: false,
     // skipTaskbar: true,
     // autoHideMenuBar: true,
     ...(process.platform === 'win32' ? { icon } : {}),

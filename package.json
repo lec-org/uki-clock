@@ -28,7 +28,8 @@
     "ahooks": "^3.7.11",
     "antd": "^5.16.1",
     "echarts": "^5.5.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^1.0.1",
